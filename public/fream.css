@@ -1,0 +1,27 @@
+.d-felx{
+    display:flex;
+}
+.pt-20{
+    padding-top:20px;
+}
+.p-20{
+    padding: 20px;
+}
+.m-20{
+    margin: 20px;
+}
+
+
+.bg-w{
+    background-color: white;
+}
+
+.po-r{
+    position: relative;
+}
+.m-0{
+    margin: 0;
+}
+.ul_none{
+    list-style: none;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./sup/headr.ejs')%>
+
+<body>
+    <div class="page  d-felx">
+        <%- include('./sup/dasebord.ejs')%>
+        <div class="content">
+
+            <div class="head">
+                
+                <div class="search_ar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="search">
+                    <button class="search_doc">Search</button>
+
+                </div>
+
+                <div class="ball">
+                    <i class="fa-solid fa-bell"></i>
+                    
+                        <img src="1.jpeg" alt="" width="40px" height="40px" >
+
+                        <select name="name">
+                            <optgroup label="name">
+                              <option id="data" value="juhhl,2022">Mohmed</option>
+                              <option id="data" value="juhhl,2022">Profile</option>
+                             
+                            </optgroup>
+                            
+                          </select>
+                    
+    
+                </div>
+
+               
+
+               
+            </div>
+           
+
+            <div class="box_filter">
+                
+                <div class="search_ar">
+                    <label for="health practitioner">Health Practitioner </label>
+                    <input type="search">
+                </div>
+                
+
+                
+                <div class="box_2">
+                    <label for="health practitioner">Specialization</label>
+                    <select name="name">
+                        <optgroup label="name">
+                          <option id="data" value="juhhl,2022">Mohmed</option>
+                          <option id="data" value="juhhl,2022">Profile</option>
+                         
+                        </optgroup>
+                        
+                      </select>
+                </div>
+                
+                  
+                  <div class="box_3">
+                    <label for="health practitioner">Clinic</label>
+                    <select name="name">
+                        <optgroup label="name">
+                          <option id="data" value="juhhl,2022">Mohmed</option>
+                          <option id="data" value="juhhl,2022">Profile</option>
+                         
+                        </optgroup>
+                        
+                      </select>
+                  </div>
+                  
+            </div>
+            <div class="btn_style">
+            <div class="session_1">
+                <h3>Health Practitioner</h3>
+            <button class="btn" onclick="show_reg()">Process Selction</button>
+            </div>
+           
+            <button class="btn2" onclick="show_reg_2()">Add health practitioner</button>
+            </div>
+
+            <div class="box_1">
+                <h1>register</h1>
+                <input type="text" name="" id="">
+                <br>
+                <input type="text" name="" id="">
+                <br>
+                <input type="text" name="" id="">
+                <button class="btn3" onclick="close_form()">Add2</button>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="reg_box_2">
+               <div class="titel_head">
+                <h1>Add Health Paractitioner
+                </h1>
+
+               </div>
+
+               <form action="" method="POST">
+                   <div class="info_det">
+                       <div class="feild">
+                        <Label>First Name</Label>
+                        <input type="text" name="first_name" id="" required >
+                        <Label>Secant Name</Label>
+                        <input type="text" name="se_name" id="" required>
+                        <Label>List Name</Label>
+                        <input type="text" name="list_name" id="" required>
+                        
+                       </div>
+                       <div class="feild">
+                        <Label>Arabic First Name</Label>
+                        <input type="text" name="Arabic_first_name" id="" required >
+                        <Label>Arabic Secant Name</Label>
+                        <input type="text" name="Arabic_se_name" id="" required>
+                        <Label>Arabic List Name</Label>
+                        <input type="text" name="Arabic_list_name" id="" required>
+                        
+                       </div>
+                    
+                       
+                       
+                       
+                       
+                   </div>
+
+                   <div class="specal">
+
+                    <div class="feild_2">
+                        <Label>Specialization </Label>
+                        <input type="text" name="Specialization" id="" required >
+                      
+                        
+                       </div>
+
+                       <div class="feild_2">
+                        <Label>Clinic or Room</Label>
+                        <input type="text" name="Clinic" id="" required>
+                        
+                       </div>
+
+                       <div class="feild_2">
+                        <Label>Role In system</Label>
+                        <input type="text" name="Role" id="" required>
+                       </div>
+
+
+                    
+                    </div>
+
+                    <div class="connect_info">
+
+                        <div class="feild_2">
+                            <Label>Momares No. </Label>
+                            <input type="text" name="momares_number" id="">
+                          
+                            
+                           </div>
+    
+                           <div class="feild_2">
+                            <Label>Phone Number</Label>
+                            <input type="text" name="phone_number" id="" required>
+                            
+                           </div>
+    
+                           
+    
+    
+                        
+                        </div>
+
+                        <div class="up_style">
+                            <div class="feild_3">
+                                <label for="">Stamp or Signature (Optional)</label>
+                                <input type="file" name="up_sgnil" id="">
+                            </div>
+
+                        </div>
+
+                  
+
+                        <div class="btn_sty">
+                            <button class="btn3" onclick="close_form_2()">Cancel</button>
+                            <button>Save</button>
+                        </div>
+                  
+               </form>
+               <div clas="error">
+                <% if (isAdded) { %>
+                    <script>
+                     Swal.fire(
+                        'Good job!',
+                        'Data saved',
+                        'success'
+                    )
+                   </script>
+                   <% } %>
+       </div>
+               
+               
+
+               
+            </div>
+            
+
+
+
+
+
+
+
+
+
+            <div class="table_style">
+                <table>
+                    <tr style="background-color: #eceff1; height:50px; border:none">
+                     
+                     <th>Full Name</th>
+                      <th>Specialization</th>
+                      <th>Clinic</th>
+                      <th>Momar's NO </th>
+                    
+                    </tr>
+                    <%
+                    if(user.length!=0){
+                    var i=1;
+                    user.forEach(function(data){
+                    %>
+                    <tr style="display: flex; align-items: center; margin-top: 10px; background-color:#fff; height:40px">
+                      <td><%=data.first_name%></td>
+                      <td><%=data.Specialization%></td>
+                      <td><%=data.Clinic%></td>
+                      <td><%=data.Momares_number%></td>
+                    </tr>
+                    <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="8" style="text-align:center ;">No Data Found</td>
+            </tr>
+        <% } %>
+                   
+                  </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="main.js"></script>
+   
+
+</body>
+</html>
